@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Gala ENT and Eye Care</title>
+
+    <style>
+      
+      .dropdown-content > li {
+position: relative;
+}
+
+.dropdown-content li .dropdown-content {
+position: absolute;
+left: 0 !important;
+top: 0 !important;
+opacity: 0 !important;
+transform: translateX(-40%) !important;
+transition: all .1s;
+}
+
+.dropdown-content li:hover .dropdown-content {
+opacity: 1 !important;
+transform: translateX(0) !important;
+}
+    </style>
+  </head>
+
+
+
+
+  <body>
+
+    <!-- First Nav -->
+    <nav>
+      <div class="nav-wrapper #1a237e indigo darken-4">
+        <a href="#" class="brand-logo">
+          <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cat-21-81494.png" alt="Logo" style="height:58px">
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a><i class="material-icons left">call</i>022-23823435</a></li>
+          <li><a><i class="material-icons left">home</i>6, Kailash Darshan, Grant Road, Mumbai-400007</a></li>
+          <li><a href='#' class="waves-effect waves-light btn-large">Book Appointment</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <!--Second Nav-->
+
+  <nav class="navbar-fixed #42a5f5 blue lighten-1">
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="middle hide-on-med-and-down">
+        <li style="width:16%"><a href="sass.html">Home</a></li>
+        <li style="width:16%"><a href="badges.html">About Us</a></li>
+        <li style="width:16%"><a href="collapsible.html">FAQs</a></li>
+        <li style="width:16%"><a href="collapsible.html">Gallery</a></li>
+        <li style="width:16%"><a href="collapsible.html" class="dropdown-trigger" data-target='services_dd' id='dd'>Services </a></li>
+        <li style="width:16%"><a href="collapsible.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<!--Services dropdown-->
+  <ul id='services_dd' class='dropdown-content'>
+      <li><a href="#!" class="dropdown-trigger inside" data-target="eye_dd" id="eye" data-beloworigin="true" data-hover="hover" data-alignment="left">Eye</a></li>
+      <li><a href="#!">Ear</a></li>
+      <li><a href="#!">Nose</a></li>
+      <li><a href="#!">Throat</a></li>
+
+  </ul>
+
+  <!--Eye Dropdown-->
+  <ul id='eye_dd' class='dropdown-content'>
+      <li><a href="#!">Lasik</a></li>
+      <li><a href="#!">Glaucoma</a></li>
+      <li><a href="#!">Catract</a></li>
+  </ul>
+
+
+
+
+<!--Footer-->
+<footer class="page-footer #1a237e indigo darken-4">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Footer Content</h5>
+        <p class="grey-text text-lighten-4"></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © Copyright 2020 Gala ENT and Eye Care. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!--Initialize script eles-->
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var main_dropdown = document.getElementById('dd');
+    M.Dropdown.init(main_dropdown, {hover:true});
+    var dropdowns = document.getElementsByClassName('inside');
+    for(var i=0; i<dropdowns.length; i++)
+      M.Dropdown.init(dropdowns[i], {
+                hover:true,
+                alignment:'right',
+                constrainWidth: false,
+                coverTrigger:false,
+                gutter:(document.getElementsByClassName('dropdown-content').width*3)/2.5+10,
+                belowOrigin:false} );
+    console.log(dropdowns[0])
+
+  });
+</script>
+
+
+  </body>
+</html>

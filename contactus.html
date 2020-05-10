@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Gala ENT and Eye Care</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+       ::placeholder{
+         color:black;
+         opacity:1;
+       }
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+
+      #wrapper {
+        position: relative;
+      }
+
+      #over_map {
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        z-index: 99;
+      }
+
+
+    </style>
+  </head>
+
+
+
+
+  <body>
+
+    <!-- First Nav -->
+    <nav>
+      <div class="nav-wrapper #1a237e indigo darken-4">
+        <a href="#" class="brand-logo">
+          <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cat-21-81494.png" alt="Logo" style="height:58px">
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a><i class="material-icons left">call</i>022-23823435</a></li>
+          <li><a><i class="material-icons left">home</i>6, Kailash Darshan, Grant Road, Mumbai-400007</a></li>
+          <li><a href='#' class="waves-effect waves-light btn-large">Book Appointment</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <!--Second Nav-->
+
+  <nav class="navbar-fixed #42a5f5 blue lighten-1">
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="middle hide-on-med-and-down">
+        <li style="width:16%"><a href="sass.html">Home</a></li>
+        <li style="width:16%"><a href="badges.html">About Us</a></li>
+        <li style="width:16%"><a href="collapsible.html">FAQs</a></li>
+        <li style="width:16%"><a href="collapsible.html">Gallery</a></li>
+        <li style="width:16%"><a href="collapsible.html">Services </a></li>
+        <li style="width:16%"><a href="collapsible.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<!--First row -->
+  <div class="row section">
+    <div class="container center-align" >
+       <div class="col s6" style="float:left">
+         <div class="card #0d47a1 blue darken-4" style="height:245px">
+          <div class="card-content white-text" >
+            <span class="card-title"><i class="material-icons">access_time</i>  Timings</span>
+            <p>Monday-Saturday, 4PM-8PM</p>
+          </div>
+        </div>
+
+
+         <div class="card #0d47a1 blue darken-4" style="height:245px">
+          <div class="card-content white-text">
+
+            <span class="card-title"><i class="material-icons">place</i>   Address</span>
+            <p>6, Kailash Darshan, Grant Road, Mumbai-400007</p>
+          </div>
+        </div>
+
+
+         <div class="card #0d47a1 blue darken-4" style="height:245px">
+          <div class="card-content white-text" style="line-height:3em">
+            <span class="card-title">Email and Phone</span>
+            <span><i class="material-icons">call</i>  Tel 022-23823435</span>
+            <p><i class="material-icons">hearing</i>   ENT Queries: +91 9821044727</p>
+            <p><i class="material-icons">remove_red_eye</i>    Eye Queries: +91 9323123435</p>
+          </div>
+        </div>
+       </div>
+
+
+<!--Form-->
+
+    <div class=" section col s6 left-align">
+      <div class="card #bbdefb blue lighten-4">
+        <div class="card-content black-text">
+          <span class="card-title">Have a question? Leave a Message!</span>
+
+        <form action='#' class="form group" >
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input  id="first_name" type="text" class="validate"/>
+              <label for="first_name">Name</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input  id="email" type="text" class="validate"/>
+              <label for="email">Email Address</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">call</i>
+              <input  id="phone" type="number" class="validate"/>
+              <label for="email">Phone Number</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <p>Are You a New Patient?</p>
+              <p>
+                <label>
+                  <input  type="radio" class="validate"/><span>Yes</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input  type="radio" class="validate"/><span>No</span>
+                </label>
+              </p>
+            </div>
+          </div>
+
+            <div class="input-field col s12">
+
+              <select id="pain" multiple >
+                <option value="Eye">Eye</option>
+                <option value="Ear">Ear</option>
+                <option value="Nose">Nose</option>
+                <option value="Throat">Throat</option>
+              </select>
+              <label for="pain">Enter Area Of Pain</label>
+            </div>
+
+
+
+
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Any Comments/Questions?</label>
+            </div>
+          </div>
+
+          <button class="btn waves-effect waves-light blue" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+
+        </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container section" style="height:400px" id="wrapper">
+  <div id="map" class="section"> </div>
+    <div class="card #0d47a1 blue darken-4" id="over_map" style="height:120px">
+        <div class="card-content white-text">
+          <span class="card-title">Gala ENT and Eye Care</span>
+          <p>6, Kailash Darshan, Grant Road, Mumbai-400007</p>
+        </div>
+        <div class="card-action center-align">
+          <a href="https://www.google.com/maps/dir//Galas+Day+Care+Nursing+Home,+Kennedy+Bridge,+Nana+Chowk,+Gamdevi,+Mumbai,+Maharashtra+400007/@18.9611255,72.778467,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3be7ce0d020ecab9:0x771741a7603569b!2m2!1d72.8134866!2d18.9610476!3e0"><i class="material-icons">directions</i><span>&nbsp&nbspDirections</span></a>
+        </div>
+      </div>
+
+</div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('select');
+       var options = document.querySelectorAll('option');
+       var instances = M.FormSelect.init(elems, options);
+      });
+    var map;
+    function initMap() {
+      var myCood = {lat: 18.961322, lng: 72.813422}
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: myCood,
+        zoom: 17
+      });
+      var marker = new google.maps.Marker({
+      position: myCood,
+      map: map,
+      title: 'Gala ENT and Eye Care'
+    });
+
+
+
+
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd3yT-00TDYD1gYM6WWWKTO6kxOVr-ho8&callback=initMap"  async defer></script>
+
+<!--Footer-->
+<footer class="page-footer #1a237e indigo darken-4 section">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Footer Content</h5>
+        <p class="grey-text text-lighten-4"></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © Copyright 2020 Gala ENT and Eye Care. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+
+
+  </body>
+</html>
