@@ -11,6 +11,84 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Gala ENT and Eye Care</title>
+    <style>
+      .temp ul{
+        list-style: none;
+        margin:0;
+        padding: 0
+      }
+
+      .temp ul li{
+        display: block;
+        position: relative;
+        float:left;
+        background: #42a5f5
+      }
+
+      .temp li ul{
+        display: none;
+      }
+
+      .temp ul li a{
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        white-space: nowrap;
+        width: inherit;
+        border-bottom: 1px white solid;
+        border-right: 1px white solid;
+
+        background: #90caf9;
+        color:black;
+
+      }
+
+      .temp ul li a{
+
+      }
+
+      .temp li:hover >ul{
+        display: block;
+        position: absolute;
+      }
+
+      .temp li:hover li{float: none;}
+
+      .temp li: hover a{ background: #1bc2a2; color: white;}
+
+      .temp li:hover li a:hover { background: #2c3e50; color: white;}
+
+      .temp li ul li { border-top: 0; }
+
+      .temp ul{
+        width: 16%;
+
+      }
+
+      .temp ul ul{
+        width: inherit;
+      }
+
+      .temp ul ul{
+        left: 100%;
+        top:0;
+      }
+
+
+
+      .temp ul:before, ul:after{
+        content: " ";
+        display: table;
+      }
+
+      .temp ul:after{
+        clear: both;
+      }
+
+
+
+
+    </style>
   </head>
 
 
@@ -21,31 +99,52 @@
     <!-- First Nav -->
     <nav>
       <div class="nav-wrapper #1a237e indigo darken-4">
-        <a href="#" class="brand-logo">
+        <a href="index.html" class="brand-logo">
           <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cat-21-81494.png" alt="Logo" style="height:58px">
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a><i class="material-icons left">call</i>022-23823435</a></li>
           <li><a><i class="material-icons left">home</i>6, Kailash Darshan, Grant Road, Mumbai-400007</a></li>
-          <li><a href='#' class="waves-effect waves-light btn-large">Book Appointment</a></li>
+          <li><a href='./contactus.html' class="waves-effect waves-light btn-large">Book Appointment</a></li>
         </ul>
     </div>
   </nav>
 
   <!--Second Nav-->
 
-  <nav class="navbar-fixed #42a5f5 blue lighten-1">
+  <nav class="navbar-fixed #42a5f5 blue lighten-1 center-align">
     <div class="nav-wrapper">
-      <ul id="nav-mobile" class="middle hide-on-med-and-down">
-        <li style="width:16%"><a href="sass.html">Home</a></li>
-        <li style="width:16%"><a href="badges.html">About Us</a></li>
-        <li style="width:16%"><a href="collapsible.html">FAQs</a></li>
-        <li style="width:16%"><a href="collapsible.html">Gallery</a></li>
-        <li style="width:16%"><a href="collapsible.html">Services </a></li>
-        <li style="width:16%"><a href="collapsible.html">Contact Us</a></li>
+      <ul id="nav-mobile" class="middle hide-on-med-and-down temp">
+        <li style="width:16%"><a href="index.html">Home</a></li>
+        <li style="width:16%"><a href="aboutus.html">About Us</a></li>
+        <li style="width:16%"><a href="faq.html">FAQs</a></li>
+        <li style="width:16%"><a href="#">Gallery</a></li>
+        <li style="width:16%"><a href="services.html">Services </a>
+          <ul >
+            <li><a href='#'>ENT <span style="float:right">&#9656;</span></a>
+              <ul>
+                <li><a href='#'>ENT Consultation</a></li>
+                <li><a href='#' class="truncate">Audiometry and Hearing Aids</a></li>
+                <li><a href='#'>Diagnostic Endoscopes</a></li>
+                <li><a href='#'>Ear Surgeries</a></li>
+                <li><a href='#'>Nasal Endoscope Surgery</a></li>
+              </ul>
+            </li>
+            <li><a href='#'>Eye<span style="float:right">&#9656;</span></a>
+              <ul style="width:inherit">
+                <li><a href='#'>Catract</a></li>
+                <li><a href='#'>Glaucoma</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li style="width:16%"><a href="contactus.html">Contact Us</a></li>
       </ul>
     </div>
   </nav>
+
 
 
 <div class="container">
@@ -62,7 +161,7 @@
             <p>Sanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay Gala</p>
           </div>
           <div class="card-action">
-            <a href="#">Learn More..</a>
+            <a href="sanjay.html">Learn More..</a>
           </div>
         </div>
       </div>
@@ -78,7 +177,7 @@
             <p>Sanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay GalaSanjay Gala</p>
           </div>
           <div class="card-action">
-            <a href="#">Learn More..</a>
+            <a href="bhavna.html">Learn More..</a>
           </div>
         </div>
       </div>
