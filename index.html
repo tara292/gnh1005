@@ -104,6 +104,7 @@
         <a href="index.html" class="brand-logo">
           <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cat-21-81494.png" alt="Logo" style="height:58px">
         </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a><i class="material-icons left">call</i>022-23823435</a></li>
           <li><a><i class="material-icons left">home</i>6, Kailash Darshan, Grant Road, Mumbai-400007</a></li>
@@ -112,10 +113,18 @@
     </div>
   </nav>
 
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a><i class="material-icons left">call</i>022-23823435</a></li>
+    <li><a><i class="material-icons left">home</i>6, Kailash Darshan, Grant Road, Mumbai-400007</a></li>
+    <li><a href='./contactus.html' class="waves-effect waves-light btn-large">Book Appointment</a></li>
+  </ul>
+
   <!--Second Nav-->
 
   <nav class="navbar-fixed #42a5f5 blue lighten-1 center-align">
     <div class="nav-wrapper">
+      <a href="#" data-target="second_nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="middle hide-on-med-and-down temp">
         <li style="width:16%"><a href="index.html">Home</a></li>
         <li style="width:16%"><a href="aboutus.html">About Us</a></li>
@@ -146,6 +155,36 @@
       </ul>
     </div>
   </nav>
+
+  <ul class="sidenav collapsible" id="second_nav">
+    <li style="width:16%"><a href="index.html">Home</a></li>
+    <li style="width:16%"><a href="aboutus.html">About Us</a></li>
+    <li style="width:16%"><a href="faq.html">FAQs</a></li>
+    <li style="width:16%"><a href="#">Gallery</a></li>
+    <li style="width:16%" class="collapsible-header">Services <i class="material-icons">filter_drama</i>
+
+      <ul class="collapsible-body" >
+        <li><a href='#'>ENT <span style="float:right">&#9656;</span></a>
+          <ul>
+            <li><a href='#'>ENT Consultation</a></li>
+            <li><a href='#' class="truncate">Audiometry and Hearing Aids</a></li>
+            <li><a href='#'>Diagnostic Endoscopes</a></li>
+            <li><a href='#'>Ear Surgeries</a></li>
+            <li><a href='#'>Nasal Endoscope Surgery</a></li>
+          </ul>
+        </li>
+        <li><a href='#'>Eye<span style="float:right">&#9656;</span></a>
+          <ul style="width:inherit">
+            <li><a href='#'>Catract</a></li>
+            <li><a href='#'>Glaucoma</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </li>
+
+    <li style="width:16%"><a href="contactus.html">Contact Us</a></li>
+    </ul>
 
 
 <!--Image Carousel-->
@@ -197,6 +236,17 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.getElementById('slider');
     var instances = M.Slider.init(elems, {duration:1000, interval:2500, indicators:false});
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+   var elems = document.querySelectorAll('.sidenav');
+   var instances = M.Sidenav.init(elems);
+
+   document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+  });
+
+ });
 </script>
 
   </body>
