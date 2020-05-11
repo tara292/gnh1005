@@ -86,15 +86,9 @@
         clear: both;
       }
 
-      * {
-        box-sizing: border-box;
-      }
 
-      body {
-        background-color: #f1f1f1;
-        padding: 20px;
-        font-family: Arial;
-      }
+
+
 
       /* Center website */
       .main {
@@ -102,25 +96,14 @@
         margin: auto;
       }
 
-      h1 {
-        font-size: 50px;
-        word-break: break-all;
-      }
 
-      .row {
-        margin: 10px -16px;
-      }
 
-      /* Add padding BETWEEN each column */
-      .row,
-      .row > .column {
-        padding: 8px;
-      }
+      /* Add padding BETWEEN each col */
 
-      /* Create three equal columns that floats next to each other */
-      .column {
-        float: left;
-        width: 33.33%;
+
+      /* Create three equal cols that floats next to each other */
+      .col {
+        
         display: none; /* Hide all elements by default */
       }
 
@@ -236,27 +219,27 @@
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
-  <div class="col flower nature s12 l4">
+  <div class="col flower nature s6 l6">
     <div class="content">
       <img src="images/pic1.jpg" alt="Mountains" style="width:100%" class="responsive-img">
 
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
-  <div class="col animal nature s12 l4">
+  <div class="col animal nature s6 l6">
     <div class="content">
     <img src="images/pic2.jpg" alt="Lights" style="width:100%" class="responsive-img">
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
-  <div class="col nature s12 l4">
+  <div class="col nature s6 l6">
     <div class="content">
     <img src="images/pic3.jpg" alt="Nature" style="width:100%" class="responsive-img">
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
 
-  <div class="col animal s12 l4">
+  <div class="col animal s6 l6">
     <div class="content">
       <img src="images/pic4.jpg" alt="Car" style="width:100%" class="responsive-img">
 
@@ -274,7 +257,7 @@
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
-  x = document.getElementsByClassName("column");
+  x = document.getElementsByClassName("col");
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
