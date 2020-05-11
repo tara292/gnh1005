@@ -13,78 +13,105 @@
 
     <title>Gala ENT and Eye Care</title>
     <style>
-      .temp ul{
-        list-style: none;
-        margin:0;
-        padding: 0
-      }
-
-      .temp ul li{
-        display: block;
-        position: relative;
-        float:left;
-        background: #42a5f5
-      }
-
-      .temp li ul{
-        display: none;
-      }
-
-      .temp ul li a{
-        display: block;
-        padding: 5px;
-        text-decoration: none;
-        white-space: nowrap;
-        width: inherit;
-        border-bottom: 1px white solid;
-        border-right: 1px white solid;
-
-        background: #90caf9;
-        color:black;
-
-      }
-
-      .temp ul li a{
-
-      }
-
-      .temp li:hover >ul{
-        display: block;
-        position: absolute;
-      }
-
-      .temp li:hover li{float: none;}
-
-      .temp li: hover a{ background: #1bc2a2; color: white;}
-
-      .temp li:hover li a:hover { background: #2c3e50; color: white;}
-
-      .temp li ul li { border-top: 0; }
-
-      .temp ul{
-        width: 16%;
-
-      }
-
-      .temp ul ul{
-        width: inherit;
-      }
-
-      .temp ul ul{
-        left: 100%;
-        top:0;
-      }
 
 
+      .container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+  }
+  @media only screen and (min-width: 601px) {
+  .container {
+    width: 90%;
+  }
+  }
+  @media only screen and (min-width: 993px) {
+  .container {
+    width: 90%;
+  }
+  }
 
-      .temp ul:before, ul:after{
-        content: " ";
-        display: table;
-      }
 
-      .temp ul:after{
-        clear: both;
-      }
+        .temp ul{
+          list-style: none;
+          margin:0;
+          padding: 0
+          z-index: 10;
+        }
+
+        .temp ul li{
+          display: block;
+          position: relative;
+          float:left;
+          background: #42a5f5
+          z-index: 10;
+
+        }
+
+        .temp li ul{
+          display: none;
+          z-index: 10;
+        }
+
+        .temp ul li a{
+          display: block;
+          padding: 5px;
+          text-decoration: none;
+          white-space: nowrap;
+          border-bottom: 1px white solid;
+          border-right: 1px white solid;
+          z-index: 10;
+          background: #90caf9;
+          color:black;
+
+
+        }
+
+
+        .temp li:hover >ul{
+          display: block;
+          position: absolute;
+
+        }
+
+        .temp li:hover li{float: none;}
+
+        .temp li: hover a{ background: #1bc2a2; color: white;}
+
+        .temp li:hover li a:hover { background: #2c3e50; color: white;}
+
+        .temp li ul li { border-top: 0; }
+
+        .temp ul{
+          width: 16%;
+
+        }
+
+        .temp ul ul{
+          width: inherit;
+          z-index: 10;
+          left: 100%;
+          top:0;
+        }
+
+
+
+
+
+        .temp ul:before, ul:after{
+          content: " ";
+          display: table;
+        }
+
+        .temp ul:after{
+          clear: both;
+        }
+
+
+
+
+
+
 
 
 
@@ -101,9 +128,9 @@
       /* Add padding BETWEEN each col */
 
 
-      /* Create three equal cols that floats next to each other */
+
       .col {
-        
+
         display: none; /* Hide all elements by default */
       }
 
@@ -151,104 +178,152 @@
 
 
   <body>
-    <!-- First Nav -->
-    <nav>
-      <div class="nav-wrapper #1a237e indigo darken-4">
-        <a href="#" class="brand-logo">
-          <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cat-21-81494.png" alt="Logo" style="height:58px">
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a><i class="material-icons left">call</i>022-23823435</a></li>
-          <li><a><i class="material-icons left">home</i>6, Kailash Darshan, Grant Road, Mumbai-400007</a></li>
-          <li><a href='#' class="waves-effect waves-light btn-large">Book Appointment</a></li>
-        </ul>
-    </div>
-  </nav>
+    <div class="navbar-fixed">
+      <nav class="#42a5f5 blue lighten-1">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">
+            <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cat-21-81494.png" alt="Logo" style="height:58px">
+          </a>
+          <a href="#" data-target="second_nav" class="sidenav-trigger  btn-floating  pulse center-align" style="float:right"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="hide-on-med-and-down temp center-align" style="margin-left:10%">
 
-  <!--Second Nav-->
+            <li style="width:15%"><a href="index.html">Home</a></li>
+            <li style="width:15%"><a href="aboutus.html">About Us</a></li>
+            <li style="width:15%"><a href="services.html">Services </a>
+              <ul >
+                <li><a href='#'>ENT <span style="float:right">&#9656;</span></a>
+                  <ul>
+                    <li><a href='#'>ENT Consultation</a></li>
+                    <li><a href='#' class="truncate">Audiometry and Hearing Aids</a></li>
+                    <li><a href='#'>Diagnostic Endoscopes</a></li>
+                    <li><a href='#'>Ear Surgeries</a></li>
+                    <li><a href='#'>Nasal Endoscope Surgery</a></li>
+                  </ul>
+                </li>
+                <li><a href='#'>Eye<span style="float:right">&#9656;</span></a>
+                  <ul style="width:inherit">
+                    <li><a href='#'>Catract</a></li>
+                    <li><a href='#'>Glaucoma</a></li>
+                  </ul>
+                </li>
 
-  <nav class="navbar-fixed #42a5f5 blue lighten-1 center-align">
-    <div class="nav-wrapper">
-      <ul id="nav-mobile" class="middle hide-on-med-and-down temp">
-        <li style="width:16%"><a href="#">Home</a></li>
-        <li style="width:16%"><a href="#">About Us</a></li>
-        <li style="width:16%"><a href="#">FAQs</a></li>
-        <li style="width:16%"><a href="#">Gallery</a></li>
-        <li style="width:16%"><a href="#">Services </a>
-          <ul >
-            <li><a href='#'>ENT <span style="float:right">&#9656;</span></a>
-              <ul>
-                <li><a href='#'>ENT Consultation</a></li>
-                <li><a href='#' class="truncate">Audiometry and Hearing Aids</a></li>
-                <li><a href='#'>Diagnostic Endoscopes</a></li>
-                <li><a href='#'>Ear Surgeries</a></li>
-                <li><a href='#'>Nasal Endoscope Surgery</a></li>
               </ul>
             </li>
-            <li><a href='#'>Eye<span style="float:right">&#9656;</span></a>
-              <ul style="width:inherit">
-                <li><a href='#'>Catract</a></li>
-                <li><a href='#'>Glaucoma</a></li>
-              </ul>
-            </li>
-
+            <li style="width:15%"><a href="faq.html">FAQs</a></li>
+            <li style="width:15%"><a href="gallery.html">Gallery</a></li>
+            <li style="width:15%"><a href="contactus.html">Contact Us</a></li>
           </ul>
-        </li>
-
-        <li style="width:16%"><a href="collapsible.html">Contact Us</a></li>
-      </ul>
+        </div>
+      </nav>
     </div>
-  </nav>
 
+    <ul class="sidenav" id="second_nav" style="margin-left:0">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li>
+        <ul class="collapsible">
+          <li style="margin-left: 20px">
+            <a class="collapsible-header waves-effect waves-blue" >Services<i class="material-icons right" style="margin-right:0">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li>
+                  <ul class="collapsible">
+                    <li>
+                      <a class="collapsible-header waves-effect waves-blue">ENT<i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
+                      <div class="collapsible-body">
+                        <ul>
+                          <li><a class="waves-effect waves-blue" href="#">ENT Consultation</a></li>
+                          <li><a class="waves-effect waves-blue" href="#">Audio and Hearing Aids</a></li>
+                          <li><a href='#' class="waves-effect waves-blue">Diagnostic Endoscopes</a></li>
+                          <li><a href='#' class="waves-effect waves-blue">Ear Surgeries</a></li>
+                          <li><a href='#' class="waves-effect waves-blue">Nasal Endoscope Surgery</a></li>
 
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="collapsible">
+                    <li>
+                      <a class="collapsible-header waves-effect waves-blue">Eye<i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
+                      <div class="collapsible-body">
+                        <ul>
+                          <li><a class="waves-effect waves-blue" href="#">Catract</a></li>
+                          <li><a class="waves-effect waves-blue" href="#">Lasik</a></li>
+                          <li><a class="waves-effect waves-blue" href="#">Glaucoma</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li><div class="divider"></div></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
 
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
 
 
 <!-- MAIN (Center website) -->
 <div class="main">
 
+  <br/>
 
-<h2>Gallery</h2>
+  <h2>Gallery</h2>
+  <br/>
+  <div id="myBtnContainer section">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+    <button class="btn" onclick="filterSelection('animal')"> Animal</button>
 
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('nature')"> Nature</button>
-  <button class="btn" onclick="filterSelection('animal')"> Animal</button>
-
-</div>
-
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="col flower nature s6 l6">
-    <div class="content">
-      <img src="images/pic1.jpg" alt="Mountains" style="width:100%" class="responsive-img">
-
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="col animal nature s6 l6">
-    <div class="content">
-    <img src="images/pic2.jpg" alt="Lights" style="width:100%" class="responsive-img">
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="col nature s6 l6">
-    <div class="content">
-    <img src="images/pic3.jpg" alt="Nature" style="width:100%" class="responsive-img">
-      <p>Lorem ipsum dolor..</p>
-    </div>
   </div>
 
-  <div class="col animal s6 l6">
-    <div class="content">
-      <img src="images/pic4.jpg" alt="Car" style="width:100%" class="responsive-img">
+  <!-- Portfolio Gallery Grid -->
 
-      <p>Lorem ipsum dolor..</p>
+  <div class="row section">
+    <div class="col flower nature s12 l12">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/pic1.jpg" alt="Mountains" style="width:100%" class="responsive-img">
+          <span class="card-title">Card Title</span>
+        </div>
+      </div>
     </div>
-  </div>
 
-<!-- END GRID -->
-</div>
+    <div class="col animal nature s12 l12">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/pic2.jpg" alt="Mountains" style="width:100%" class="responsive-img">
+          <span class="card-title">Card Title</span>
+        </div>
+      </div>
+    </div>
+    <div class="col nature s12 l12">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/pic3.jpg" alt="Mountains" style="width:100%" class="responsive-img">
+          <span class="card-title">Card Title</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col animal s12 l12">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/pic4.jpg" alt="Mountains" style="width:100%" class="responsive-img">
+          <span class="card-title">Card Title</span>
+        </div>
+      </div>
+    </div>
+
+  <!-- END GRID -->
+  </div>
 
 <!-- END MAIN -->
 </div>
@@ -299,6 +374,27 @@ for (var i = 0; i < btns.length; i++) {
 }
 </script>
 
+<script type="text/javascript" language="javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.getElementById('slider');
+    var instances = M.Slider.init(elems, {duration:1000, interval:2500, indicators:false});
+
+      var elems = document.querySelectorAll('select');
+       var options = document.querySelectorAll('option');
+       var instances = M.FormSelect.init(elems, options);
+
+
+
+   var elems = document.querySelectorAll('.sidenav');
+   var instances = M.Sidenav.init(elems);
+
+
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+  });
+
+
+</script>
 
 
 

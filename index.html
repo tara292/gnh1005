@@ -11,11 +11,28 @@
     <title>Gala ENT and Eye Care</title>
     <style>
 
+    .container {
+margin: 0 auto;
+max-width: 1280px;
+width: 90%;
+}
+@media only screen and (min-width: 601px) {
+.container {
+  width: 85%;
+}
+}
+@media only screen and (min-width: 993px) {
+.container {
+  width: 90%;
+}
+}
+
 
       .temp ul{
         list-style: none;
         margin:0;
         padding: 0
+        z-index: 10;
       }
 
       .temp ul li{
@@ -23,10 +40,13 @@
         position: relative;
         float:left;
         background: #42a5f5
+        z-index: 10;
+
       }
 
       .temp li ul{
         display: none;
+        z-index: 10;
       }
 
       .temp ul li a{
@@ -34,12 +54,12 @@
         padding: 5px;
         text-decoration: none;
         white-space: nowrap;
-        width: inherit;
         border-bottom: 1px white solid;
         border-right: 1px white solid;
-
+        z-index: 10;
         background: #90caf9;
         color:black;
+
 
       }
 
@@ -47,6 +67,7 @@
       .temp li:hover >ul{
         display: block;
         position: absolute;
+
       }
 
       .temp li:hover li{float: none;}
@@ -64,12 +85,12 @@
 
       .temp ul ul{
         width: inherit;
-      }
-
-      .temp ul ul{
+        z-index: 10;
         left: 100%;
         top:0;
       }
+
+
 
 
 
@@ -96,52 +117,20 @@
 
 
     <!-- First Nav -->
-    <nav>
-      <div class="nav-wrapper #1a237e indigo darken-4">
-        <a href="index.html" class="brand-logo">
-          <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cat-21-81494.png" alt="Logo" style="height:58px">
-        </a>
 
-        <ul  class="right">
-          <li><a><i class="material-icons left">call</i>022-23823435</a></li>
-          <li><a><i class="material-icons left">home</i>6, Kailash Darshan, Grant Road, Mumbai-400007</a></li>
-          <li><a href='./contactus.html' class="waves-effect waves-light btn-large">Book Appointment</a></li>
-        </ul>
-    </div>
-  </nav>
-
-  <div class="row">
-    <div class="col s12 #1123ae  darken-4 right-align" style="height:58px; line-height: 58px; background:pink">
+  <!--Second Nav-->
+<div class="navbar-fixed">
+  <nav class="#42a5f5 blue lighten-1">
+    <div class="nav-wrapper">
       <a href="index.html" class="brand-logo">
         <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cat-21-81494.png" alt="Logo" style="height:58px">
       </a>
+      <a href="#" data-target="second_nav" class="sidenav-trigger  btn-floating  pulse center-align" style="float:right"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="hide-on-med-and-down temp center-align" style="margin-left:10%">
 
-
-        <span><i class="material-icons">call</i>022-23823435</span>
-        <span><i class="material-icons">home</i>6, Kailash Darshan, Grant Road, Mumbai-400007</span>
-        <span><a href='./contactus.html' class="waves-effect waves-light btn">Book Appointment</a></span>
-
-    </div>
-  </div>
-
-
-  <ul class="sidenav" id="mobile-demo">
-    <li><a><i class="material-icons left">call</i>022-23823435</a></li>
-    <li><a><i class="material-icons left">home</i>6, Kailash Darshan, Grant Road, Mumbai-400007</a></li>
-    <li><a href='./contactus.html' class="waves-effect waves-light btn-large">Book Appointment</a></li>
-  </ul>
-
-  <!--Second Nav-->
-
-  <nav class="navbar-fixed #42a5f5 blue lighten-1 center-align">
-    <div class="nav-wrapper">
-      <a href="#" data-target="second_nav" class="sidenav-trigger blue lighten-1  #42a5f5 btn-floating  pulse center-align" ><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="middle hide-on-med-and-down temp">
-        <li style="width:16%"><a href="index.html">Home</a></li>
-        <li style="width:16%"><a href="aboutus.html">About Us</a></li>
-        <li style="width:16%"><a href="faq.html">FAQs</a></li>
-        <li style="width:16%"><a href="gallery.html">Gallery</a></li>
-        <li style="width:16%"><a href="services.html">Services </a>
+        <li style="width:15%"><a href="index.html">Home</a></li>
+        <li style="width:15%"><a href="aboutus.html">About Us</a></li>
+        <li style="width:15%"><a href="services.html">Services </a>
           <ul >
             <li><a href='#'>ENT <span style="float:right">&#9656;</span></a>
               <ul>
@@ -161,14 +150,15 @@
 
           </ul>
         </li>
-
-        <li style="width:16%"><a href="contactus.html">Contact Us</a></li>
+        <li style="width:15%"><a href="faq.html">FAQs</a></li>
+        <li style="width:15%"><a href="gallery.html">Gallery</a></li>
+        <li style="width:15%"><a href="contactus.html">Contact Us</a></li>
       </ul>
     </div>
   </nav>
+</div>
 
-
-<!--Secondnav mobile view-->
+<!--Mobile side nav-->
 <ul class="sidenav" id="second_nav" style="margin-left:0">
   <li><a href="index.html">Home</a></li>
   <li><a href="aboutus.html">About Us</a></li>
@@ -219,42 +209,45 @@
   </li>
 
   <li><a href="contactus.html">Contact Us</a></li>
-  </ul>
+</ul>
 
 
 
 <!--Image Carousel-->
-<div class="container section">
-  <div class="slider" id="slider">
-    <div class="carousel-fixed-item center">
-        <a id="carousel-prev" class="movePrevCarousel btn waves-effect left">button</a>
-        <a id="carousel-next" class="moveNextCarousel btn waves-effect right">button</a>
+<div class="section">
+  <div class="container">
+    <div class="slider" id="slider">
+      <div class="carousel-fixed-item center">
+          <a id="carousel-prev" class="movePrevCarousel btn waves-effect left">button</a>
+          <a id="carousel-next" class="moveNextCarousel btn waves-effect right">button</a>
+      </div>
+      <ul class="slides">
+        <li>
+          <img src="./images/pic1.jpg"> <!-- random image -->
+        </li>
+        <li>
+          <img src="./images/pic2.jpg"> <!-- random image -->
+        </li>
+        <li>
+          <img src="./images/pic3.jpg"> <!-- random image -->
+        </li>
+        <li>
+          <img src="./images/pic4.jpg"> <!-- random image -->
+        </li>
+      </ul>
     </div>
-    <ul class="slides">
-      <li>
-        <img src="./images/pic1.jpg"> <!-- random image -->
-      </li>
-      <li>
-        <img src="./images/pic2.jpg"> <!-- random image -->
-      </li>
-      <li>
-        <img src="./images/pic3.jpg"> <!-- random image -->
-      </li>
-      <li>
-        <img src="./images/pic4.jpg"> <!-- random image -->
-      </li>
-    </ul>
   </div>
 </div>
 
 <!--services-->
 <div class="container">
 <div class="row">
+
   <div class="col s12 m6 l4">
     <div class="card #2196f3 blue">
       <div class="card-content white-text">
         <span class="card-title">Hearing Aids</span>
-        <p>blahblahblahblahblahblahblahblahblahblahblahblahblah</p>
+        <p>blahblahblah</p>
       </div>
       <div class="card-action">
         <a href="#">Learn more..</a>
@@ -266,7 +259,7 @@
     <div class="card #2196f3 blue">
       <div class="card-content white-text">
         <span class="card-title">Audiometry</span>
-        <p>blahblahblahblahblahblahblahblahblahblahblahblahblah</p>
+        <p>blahblahblah</p>
       </div>
       <div class="card-action">
         <a href="#">Learn more..</a>
@@ -278,7 +271,7 @@
     <div class="card #2196f3 blue">
       <div class="card-content white-text">
         <span class="card-title">Rhinoplasty</span>
-        <p>blahblahblahblahblahblahblahblahblahblahblahblahblah</p>
+        <p>blahblahblah</p>
       </div>
       <div class="card-action">
         <a href="#">Learn more..</a>
@@ -290,7 +283,7 @@
     <div class="card #2196f3 blue">
       <div class="card-content white-text">
         <span class="card-title">Laryngoscopy</span>
-        <p>blahblahblahblahblahblahblahblahblahblahblahblahblah</p>
+        <p>blahblahblah</p>
       </div>
       <div class="card-action">
         <a href="#">Learn more..</a>
@@ -302,7 +295,7 @@
     <div class="card #2196f3 blue">
       <div class="card-content white-text">
         <span class="card-title">Catract</span>
-        <p>blahblahblahblahblahblahblahblahblahblahblahblahblah</p>
+        <p>blahblahblah</p>
       </div>
       <div class="card-action">
         <a href="#">Learn more..</a>
@@ -314,7 +307,7 @@
     <div class="card #2196f3 blue">
       <div class="card-content white-text">
         <span class="card-title">Lasik</span>
-        <p>blahblahblahblahblahblahblahblahblahblahblahblahblah</p>
+        <p>blahblahblah</p>
       </div>
       <div class="card-action">
         <a href="#">Learn more..</a>

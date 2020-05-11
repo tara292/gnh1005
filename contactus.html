@@ -38,10 +38,29 @@
 
     </style>
     <style>
+
+    .container {
+margin: 0 auto;
+max-width: 1280px;
+width: 90%;
+}
+@media only screen and (min-width: 601px) {
+.container {
+  width: 85%;
+}
+}
+@media only screen and (min-width: 993px) {
+.container {
+  width: 90%;
+}
+}
+
+
       .temp ul{
         list-style: none;
         margin:0;
         padding: 0
+        z-index: 10;
       }
 
       .temp ul li{
@@ -49,10 +68,13 @@
         position: relative;
         float:left;
         background: #42a5f5
+        z-index: 10;
+
       }
 
       .temp li ul{
         display: none;
+        z-index: 10;
       }
 
       .temp ul li a{
@@ -60,22 +82,20 @@
         padding: 5px;
         text-decoration: none;
         white-space: nowrap;
-        width: inherit;
         border-bottom: 1px white solid;
         border-right: 1px white solid;
-
+        z-index: 10;
         background: #90caf9;
         color:black;
 
-      }
-
-      .temp ul li a{
 
       }
+
 
       .temp li:hover >ul{
         display: block;
         position: absolute;
+
       }
 
       .temp li:hover li{float: none;}
@@ -93,12 +113,12 @@
 
       .temp ul ul{
         width: inherit;
-      }
-
-      .temp ul ul{
+        z-index: 10;
         left: 100%;
         top:0;
       }
+
+
 
 
 
@@ -115,6 +135,7 @@
 
 
     </style>
+
   </head>
 
 
@@ -123,54 +144,97 @@
   <body>
 
     <!-- First Nav -->
-    <nav>
-      <div class="nav-wrapper #1a237e indigo darken-4">
-        <a href="index.html" class="brand-logo">
-          <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cat-21-81494.png" alt="Logo" style="height:58px">
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a><i class="material-icons left">call</i>022-23823435</a></li>
-          <li><a><i class="material-icons left">home</i>6, Kailash Darshan, Grant Road, Mumbai-400007</a></li>
-          <li><a href='contactus.html' class="waves-effect waves-light btn-large">Book Appointment</a></li>
-        </ul>
-    </div>
-  </nav>
+    <div class="navbar-fixed">
+      <nav class="#42a5f5 blue lighten-1">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">
+            <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cat-21-81494.png" alt="Logo" style="height:58px">
+          </a>
+          <a href="#" data-target="second_nav" class="sidenav-trigger  btn-floating  pulse center-align" style="float:right"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="hide-on-med-and-down temp center-align" style="margin-left:10%">
 
-  <!--Second Nav-->
+            <li style="width:15%"><a href="index.html">Home</a></li>
+            <li style="width:15%"><a href="aboutus.html">About Us</a></li>
+            <li style="width:15%"><a href="services.html">Services </a>
+              <ul >
+                <li><a href='#'>ENT <span style="float:right">&#9656;</span></a>
+                  <ul>
+                    <li><a href='#'>ENT Consultation</a></li>
+                    <li><a href='#' class="truncate">Audiometry and Hearing Aids</a></li>
+                    <li><a href='#'>Diagnostic Endoscopes</a></li>
+                    <li><a href='#'>Ear Surgeries</a></li>
+                    <li><a href='#'>Nasal Endoscope Surgery</a></li>
+                  </ul>
+                </li>
+                <li><a href='#'>Eye<span style="float:right">&#9656;</span></a>
+                  <ul style="width:inherit">
+                    <li><a href='#'>Catract</a></li>
+                    <li><a href='#'>Glaucoma</a></li>
+                  </ul>
+                </li>
 
-  <nav class="navbar-fixed #42a5f5 blue lighten-1 center-align">
-    <div class="nav-wrapper">
-      <ul id="nav-mobile" class="middle hide-on-med-and-down temp">
-        <li style="width:16%"><a href="index.html">Home</a></li>
-        <li style="width:16%"><a href="aboutus.html">About Us</a></li>
-        <li style="width:16%"><a href="faq.html">FAQs</a></li>
-        <li style="width:16%"><a href="#">Gallery</a></li>
-        <li style="width:16%"><a href="services.html">Services </a>
-          <ul >
-            <li><a href='#'>ENT <span style="float:right">&#9656;</span></a>
-              <ul>
-                <li><a href='#'>ENT Consultation</a></li>
-                <li><a href='#' class="truncate">Audiometry and Hearing Aids</a></li>
-                <li><a href='#'>Diagnostic Endoscopes</a></li>
-                <li><a href='#'>Ear Surgeries</a></li>
-                <li><a href='#'>Nasal Endoscope Surgery</a></li>
               </ul>
             </li>
-            <li><a href='#'>Eye<span style="float:right">&#9656;</span></a>
-              <ul style="width:inherit">
-                <li><a href='#'>Catract</a></li>
-                <li><a href='#'>Glaucoma</a></li>
-              </ul>
-            </li>
-
+            <li style="width:15%"><a href="faq.html">FAQs</a></li>
+            <li style="width:15%"><a href="gallery.html">Gallery</a></li>
+            <li style="width:15%"><a href="contactus.html">Contact Us</a></li>
           </ul>
-        </li>
-
-        <li style="width:16%"><a href="contactus.html">Contact Us</a></li>
-      </ul>
+        </div>
+      </nav>
     </div>
-  </nav>
 
+    <!--Mobile side nav-->
+    <ul class="sidenav" id="second_nav" style="margin-left:0">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li>
+        <ul class="collapsible">
+          <li style="margin-left: 20px">
+            <a class="collapsible-header waves-effect waves-blue" >Services<i class="material-icons right" style="margin-right:0">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li>
+                  <ul class="collapsible">
+                    <li>
+                      <a class="collapsible-header waves-effect waves-blue">ENT<i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
+                      <div class="collapsible-body">
+                        <ul>
+                          <li><a class="waves-effect waves-blue" href="#">ENT Consultation</a></li>
+                          <li><a class="waves-effect waves-blue" href="#">Audio and Hearing Aids</a></li>
+                          <li><a href='#' class="waves-effect waves-blue">Diagnostic Endoscopes</a></li>
+                          <li><a href='#' class="waves-effect waves-blue">Ear Surgeries</a></li>
+                          <li><a href='#' class="waves-effect waves-blue">Nasal Endoscope Surgery</a></li>
+
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="collapsible">
+                    <li>
+                      <a class="collapsible-header waves-effect waves-blue">Eye<i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
+                      <div class="collapsible-body">
+                        <ul>
+                          <li><a class="waves-effect waves-blue" href="#">Catract</a></li>
+                          <li><a class="waves-effect waves-blue" href="#">Lasik</a></li>
+                          <li><a class="waves-effect waves-blue" href="#">Glaucoma</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li><div class="divider"></div></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
 
 <!--First row -->
   <div class="row section">
@@ -242,7 +306,7 @@
               <p>Are You a New Patient?</p>
               <p>
                 <label>
-                  <input  type="radio" class="validate"/><span>Yes&nbsp&nbsp</span> 
+                  <input  type="radio" class="validate"/><span>Yes&nbsp&nbsp</span>
                   <input  type="radio" class="validate"/><span>No</span>
                 </label>
               </p>
@@ -322,6 +386,28 @@
 
     }
   </script>
+  <script type="text/javascript" language="javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.getElementById('slider');
+      var instances = M.Slider.init(elems, {duration:1000, interval:2500, indicators:false});
+
+        var elems = document.querySelectorAll('select');
+         var options = document.querySelectorAll('option');
+         var instances = M.FormSelect.init(elems, options);
+
+
+
+     var elems = document.querySelectorAll('.sidenav');
+     var instances = M.Sidenav.init(elems);
+
+
+      var elems = document.querySelectorAll('.collapsible');
+      var instances = M.Collapsible.init(elems);
+    });
+
+
+  </script>
+
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd3yT-00TDYD1gYM6WWWKTO6kxOVr-ho8&callback=initMap"  async defer></script>
 
 <!--Footer-->
