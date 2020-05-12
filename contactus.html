@@ -8,12 +8,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href='./main.css'>
 
     <title>Gala ENT and Eye Care</title>
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
 
        ::placeholder{
          color:black;
@@ -34,104 +32,6 @@
         left: 30px;
         z-index: 99;
       }
-
-
-    </style>
-    <style>
-
-    .container {
-margin: 0 auto;
-max-width: 1280px;
-width: 90%;
-}
-@media only screen and (min-width: 601px) {
-.container {
-  width: 85%;
-}
-}
-@media only screen and (min-width: 993px) {
-.container {
-  width: 90%;
-}
-}
-
-
-      .temp ul{
-        list-style: none;
-        margin:0;
-        padding: 0
-        z-index: 10;
-      }
-
-      .temp ul li{
-        display: block;
-        position: relative;
-        float:left;
-        background: #42a5f5
-        z-index: 10;
-
-      }
-
-      .temp li ul{
-        display: none;
-        z-index: 10;
-      }
-
-      .temp ul li a{
-        display: block;
-        padding: 5px;
-        text-decoration: none;
-        white-space: nowrap;
-        border-bottom: 1px white solid;
-        border-right: 1px white solid;
-        z-index: 10;
-        background: #90caf9;
-        color:black;
-
-
-      }
-
-
-      .temp li:hover >ul{
-        display: block;
-        position: absolute;
-
-      }
-
-      .temp li:hover li{float: none;}
-
-      .temp li: hover a{ background: #1bc2a2; color: white;}
-
-      .temp li:hover li a:hover { background: #2c3e50; color: white;}
-
-      .temp li ul li { border-top: 0; }
-
-      .temp ul{
-        width: 16%;
-
-      }
-
-      .temp ul ul{
-        width: inherit;
-        z-index: 10;
-        left: 100%;
-        top:0;
-      }
-
-
-
-
-
-      .temp ul:before, ul:after{
-        content: " ";
-        display: table;
-      }
-
-      .temp ul:after{
-        clear: both;
-      }
-
-
 
 
     </style>
@@ -306,7 +206,11 @@ width: 90%;
               <p>Are You a New Patient?</p>
               <p>
                 <label>
-                  <input  type="radio" class="validate"/><span>Yes&nbsp&nbsp</span>
+                  <input  type="radio" class="validate"/><span>Yes</span>
+                </label>
+              </p>
+              <p>
+                <label>
                   <input  type="radio" class="validate"/><span>No</span>
                 </label>
               </p>
@@ -350,17 +254,15 @@ width: 90%;
 <div class="container section" style="height:400px" id="wrapper">
   <div id="map" class="section"> </div>
   <div class="row">
-    <div class="card #0d47a1 blue darken-4  col s5 m3 l3" id="over_map">
-        <div class="card-content white-text ">
+    <div class="card #0d47a1 blue darken-4  col s6 m3 l3" id="over_map" >
+        <div class="card-content white-text " style="padding:5%">
           <span><b>Gala ENT and Eye Care</b></span>
           <p>6, Kailash Darshan, Grant Road, Mumbai-400007</p>
-          <br/>
+
           <a style="color:orange" class="center-align" href="https://www.google.com/maps/dir//Galas+Day+Care+Nursing+Home,+Kennedy+Bridge,+Nana+Chowk,+Gamdevi,+Mumbai,+Maharashtra+400007/@18.9611255,72.778467,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3be7ce0d020ecab9:0x771741a7603569b!2m2!1d72.8134866!2d18.9610476!3e0"><i class="material-icons">directions</i><span>&nbsp&nbspDirections</span></a>
         </div>
-
       </div>
-    </div
-
+    </div>
 </div>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -380,10 +282,9 @@ width: 90%;
       map: map,
       title: 'Gala ENT and Eye Care'
     });
-
-
-
-
+    google.maps.event.addListener(marker, 'click', function() {
+    window.location.href = "https://www.google.com/maps/dir//Galas+Day+Care+Nursing+Home,+Kennedy+Bridge,+Nana+Chowk,+Gamdevi,+Mumbai,+Maharashtra+400007/@18.9611255,72.778467,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3be7ce0d020ecab9:0x771741a7603569b!2m2!1d72.8134866!2d18.9610476!3e0";
+});
     }
   </script>
   <script type="text/javascript" language="javascript">
