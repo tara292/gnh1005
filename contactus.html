@@ -29,7 +29,7 @@
       #over_map {
         position: absolute;
         top: 10px;
-        left: 30px;
+        left: 10px;
         z-index: 99;
       }
 
@@ -140,7 +140,7 @@
   <div class="row section">
     <div class="container center-align" >
        <div class="col s12 m6 l6" style="float:left">
-         <div class="card #0d47a1 blue darken-4" style="height:200px">
+         <div class="card #0d47a1 blue darken-4" style="height:190px">
           <div class="card-content white-text" >
             <span class="card-title"><i class="material-icons">access_time</i>  Timings</span>
             <p>Monday-Saturday, 4PM-8PM</p>
@@ -148,7 +148,7 @@
         </div>
 
         <a href='#map'>
-         <div class="card #0d47a1 blue darken-4" style="height:200px">
+         <div class="card #0d47a1 blue darken-4" style="height:190px">
           <div class="card-content white-text">
 
             <span class="card-title"><i class="material-icons">place</i>   Address</span>
@@ -157,7 +157,7 @@
         </div>
       </a>
 
-         <div class="card #0d47a1 blue darken-4" style="height:245px">
+         <div class="card #0d47a1 blue darken-4" style="height:265px">
           <div class="card-content white-text" style="line-height:3em">
             <span class="card-title">Email and Phone</span>
             <span><i class="material-icons">call</i>  Tel 022-23823435</span>
@@ -173,53 +173,40 @@
     <div class=" section col s12 m6 l6 left-align">
       <div class="card #bbdefb blue lighten-4">
         <div class="card-content black-text">
-          <span class="card-title">Have a question? Leave a Message!</span>
-
+          <span class="card-title">Book Appointment</span>
+          <p>You will be called with the confirmation of the appointment</p>
+  
         <form action='#' class="form group" >
-
+  
           <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l12">
               <i class="material-icons prefix">account_circle</i>
-              <input  id="first_name" type="text" class="validate"/>
+              <input  id="first_name" type="text" class="validate" />
               <label for="first_name">Name</label>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
+  
+  
+  
+            <div class="input-field col s12 l12">
               <i class="material-icons prefix">email</i>
               <input  id="email" type="text" class="validate"/>
               <label for="email">Email Address</label>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
+  
+  
+  
+            <div class="input-field col s12 l12">
               <i class="material-icons prefix">call</i>
-              <input  id="phone" type="number" class="validate"/>
-              <label for="email">Phone Number</label>
+              <input  id="phone" type="number" class="validate" />
+              <label for="phone">Phone Number</label>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <p>Are You a New Patient?</p>
-              <p>
-                <label>
-                  <input  type="radio" class="validate"/><span>Yes</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input  type="radio" class="validate"/><span>No</span>
-                </label>
-              </p>
-
-            </div>
-          </div>
-
-            <div class="input-field col s12">
-
+  
+  
+  
+            
+  
+            <div class="input-field col s12 l12" >
+              <i class="material-icons prefix"></i>
               <select id="pain" multiple >
                 <option value="Eye">Eye</option>
                 <option value="Ear">Ear</option>
@@ -228,21 +215,26 @@
               </select>
               <label for="pain">Enter Area Of Pain</label>
             </div>
-
-
-
-
-          <div class="row">
-            <div class="input-field col s12">
-              <textarea id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">Any Comments/Questions?</label>
+  
+  
+            <div class="input-field col s12 l12">
+              <i class="material-icons prefix">date_range</i>
+              <input type="text" class="datepicker" id="date">
+              <label for="date">Select Date for Appointment?</label>
             </div>
-          </div>
-
-          <button class="btn waves-effect waves-light blue" type="submit" name="action">Submit
+  
+  
+            <div class="input-field col s12 l12">
+              <i class="material-icons prefix">create</i>
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Any Comments?</label>
+            </div>
+  
+  
+          <button class="btn waves-effect waves-light blue" type="submit" name="action" style="float:right">Submit
             <i class="material-icons right">send</i>
           </button>
-
+        </div>
         </form>
         </div>
       </div>
@@ -256,9 +248,8 @@
   <div class="row">
     <div class="card #0d47a1 blue darken-4  col s6 m3 l3" id="over_map" >
         <div class="card-content white-text " style="padding:5%">
-          <span><b>Gala ENT and Eye Care</b></span>
-          <p>6, Kailash Darshan, Grant Road, Mumbai-400007</p>
-
+          <p><b>Gala ENT and Eye Care</b></p><br/>
+          <p>6, Kailash Darshan, Grant Road, Mumbai-400007</p><br/>
           <a style="color:orange" class="center-align" href="https://www.google.com/maps/dir//Galas+Day+Care+Nursing+Home,+Kennedy+Bridge,+Nana+Chowk,+Gamdevi,+Mumbai,+Maharashtra+400007/@18.9611255,72.778467,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3be7ce0d020ecab9:0x771741a7603569b!2m2!1d72.8134866!2d18.9610476!3e0"><i class="material-icons">directions</i><span>&nbsp&nbspDirections</span></a>
         </div>
       </div>
