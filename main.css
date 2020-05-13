@@ -73,6 +73,19 @@ width: 90%;
   }
 
   
+  .sidenav-trigger{
+    overflow: hidden;
+    margin-top: 122px;
+   
+}
+.sidenav{
+  overflow: hidden;
+    margin-top: 115px;
+    background-color: rgba(0,0,0,0)
+}
+
+
+
 
   
 
@@ -103,6 +116,10 @@ width: 90%;
     z-index: 10;
     left: 100%;
     top:0;
+  }
+
+  h2,h3{
+    color: #1e88e5
   }
 
 
