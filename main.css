@@ -18,12 +18,17 @@ width: 90%;
 }
 }
 
+.temp{
+  color: #1e88e5
+}
+
 
   .temp ul{
     list-style: none;
     margin:0;
     padding: 0;
     z-index: 10;
+    color:black;
   }
 
   .temp ul li{
@@ -48,12 +53,28 @@ width: 90%;
     border-bottom: 1px white solid;
     border-right: 1px white solid;
     z-index: 10;
-    background: #90caf9;
-    color:black;
-
+    background:#e3f2fd 
+    
 
   }
 
+  nav ul a{
+    color:black;
+  }
+
+   .card-title {
+  
+    color:#1e88e5
+  }
+
+  .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+    color:#1e88e5;
+    
+  }
+
+  
+
+  
 
   .temp li:hover >ul{
     display: block;
@@ -63,7 +84,8 @@ width: 90%;
 
   .temp li:hover li{float: none;}
 
-  .temp li: hover a{ background: #1bc2a2; color: white;}
+  .temp li a:hover{
+    background: #2c3e50; color: white;}
 
   .temp li:hover li a:hover { background: #2c3e50; color: white;}
 
@@ -73,6 +95,8 @@ width: 90%;
     width: 16%;
 
   }
+
+  
 
   .temp ul ul{
     width: inherit;
@@ -93,3 +117,5 @@ width: 90%;
   .temp ul:after{
     clear: both;
   }
+
+  
